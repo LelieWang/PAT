@@ -10,12 +10,12 @@ def compute_num(num_):
     return num_set
 
 num=int(input())
-num_str=list(map(int,input().split()))
+num_str=list(map(int,input().split()))#这个用法要注意
 result_list=set(num_str)
 for i in range(num):
     covers=compute_num((num_str[i]))
     for j in num_str:
-        result_list=result_list.difference(covers)
+        result_list=result_list.difference(covers)#这道题最重要的就是用的集合的这个方法
 
 result_list=list(result_list)
 result_list.sort(reverse=True)
